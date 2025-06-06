@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<coverage version="1.0" date="2025-06-05_20-20-28" tag="">
+  <assembly name="Scripts">
+    <class name="CameraFollow" coveredlines="14" coverablelines="17" totallines="33" coveredbranches="0" totalbranches="0" />
+    <class name="ColliderDamage" coveredlines="0" coverablelines="10" totallines="21" coveredbranches="0" totalbranches="0" />
+    <class name="Enemy" coveredlines="0" coverablelines="186" totallines="309" coveredbranches="0" totalbranches="0" />
+    <class name="GameCloud" coveredlines="0" coverablelines="27" totallines="62" coveredbranches="0" totalbranches="0" />
+    <class name="GameData" coveredlines="7" coverablelines="7" totallines="14" coveredbranches="0" totalbranches="0" />
+    <class name="GameUI" coveredlines="26" coverablelines="58" totallines="110" coveredbranches="0" totalbranches="0" />
+    <class name="Level" coveredlines="20" coverablelines="20" totallines="63" coveredbranches="0" totalbranches="0" />
+    <class name="ListUsersData" coveredlines="0" coverablelines="1" totallines="63" coveredbranches="0" totalbranches="0" />
+    <class name="MenuUIHandler" coveredlines="31" coverablelines="162" totallines="247" coveredbranches="0" totalbranches="0" />
+    <class name="PauseUI" coveredlines="0" coverablelines="58" totallines="93" coveredbranches="0" totalbranches="0" />
+    <class name="Player" coveredlines="49" coverablelines="189" totallines="290" coveredbranches="0" totalbranches="0" />
+    <class name="SaveUserData" coveredlines="0" coverablelines="2" totallines="63" coveredbranches="0" totalbranches="0" />
+    <class name="SaveUserNameData" coveredlines="0" coverablelines="5" totallines="63" coveredbranches="0" totalbranches="0" />
+  </assembly>
+</coverage>

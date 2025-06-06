@@ -1,0 +1,4 @@
+repository "Diplom@ArtemEretik@cloud"
+  path "/"
+    br "/main"
+    co "/main"

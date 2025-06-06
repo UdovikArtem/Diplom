@@ -1,0 +1,41 @@
+{
+    "m_Dictionary": {
+        "m_DictionaryValues": [
+            {
+                "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                "key": "IncludeAssemblies",
+                "value": "{\"m_Value\":\"EditTest,Scripts\"}"
+            },
+            {
+                "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                "key": "Path",
+                "value": "{\"m_Value\":\"{ProjectPath}\"}"
+            },
+            {
+                "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                "key": "HistoryPath",
+                "value": "{\"m_Value\":\"{ProjectPath}\"}"
+            },
+            {
+                "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                "key": "PathsToInclude",
+                "value": "{\"m_Value\":\"\"}"
+            },
+            {
+                "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                "key": "PathsToExclude",
+                "value": "{\"m_Value\":\"{ProjectPath}/Assets/Scripts/PlayerAnimation/**,{ProjectPath}/Assets/Scripts/GameObjects/**,{ProjectPath}/Assets/Scripts/Enemy/RunBihavior.cs,{ProjectPath}/Assets/Scripts/Enemy/PrepairAttackBehavior.cs,{ProjectPath}/Assets/Scripts/Enemy/LitlleStopBehavior.cs,{ProjectPath}/Assets/Scripts/Enemy/EnemyAttackBehavio.cs,{ProjectPath}/Assets/Scripts/Enemy/BirdEnemy/BirdPrepairAttackBehavior.cs,{ProjectPath}/Assets/Scripts/Enemy/BirdEnemy/BirdEnemy.cs,{ProjectPath}/Assets/Scripts/Enemy/BirdEnemy/BirdEnemyAnimation.cs,{ProjectPath}/Assets/TextMesh Pro/**,{ProjectPath}/Assets/Scripts/Enemy/SimpleEnemy/EnemyAnim.cs,{ProjectPath}/Assets/Scripts/Managers/GameManager.cs,{ProjectPath}/Assets/Scripts/Tests/**\"}"
+            },
+            {
+                "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                "key": "EnableCodeCoverage",
+                "value": "{\"m_Value\":true}"
+            },
+            {
+                "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                "key": "OpenReportWhenGenerated",
+                "value": "{\"m_Value\":false}"
+            }
+        ]
+    }
+}

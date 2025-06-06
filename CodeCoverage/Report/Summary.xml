@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CoverageReport scope="Summary">
+  <Summary>
+    <Generatedon>05/06/2025 - 20:40:00</Generatedon>
+    <Parser>MultiReportParser (7x OpenCoverParser)</Parser>
+    <Assemblies>1</Assemblies>
+    <Classes>13</Classes>
+    <Files>10</Files>
+    <Coveredlines>382</Coveredlines>
+    <Uncoveredlines>360</Uncoveredlines>
+    <Coverablelines>742</Coverablelines>
+    <Totallines>1242</Totallines>
+    <Linecoverage>51.4</Linecoverage>
+    <Coveredbranches>0</Coveredbranches>
+    <Totalbranches>0</Totalbranches>
+    <Coveredmethods>79</Coveredmethods>
+    <Totalmethods>126</Totalmethods>
+    <Methodcoverage>62.6</Methodcoverage>
+  </Summary>
+  <Coverage>
+    <Assembly name="Scripts" classes="13" coverage="51.4" coveredlines="382" coverablelines="742" totallines="1431" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="79" totalmethods="126" methodcoverage="62.6">
+      <Class name="CameraFollow" coverage="100" coveredlines="17" coverablelines="17" totallines="33" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="2" methodcoverage="100" />
+      <Class name="ColliderDamage" coverage="100" coveredlines="10" coverablelines="10" totallines="21" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="1" methodcoverage="100" />
+      <Class name="Enemy" coverage="30.1" coveredlines="56" coverablelines="186" totallines="309" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="11" totalmethods="30" methodcoverage="36.6" />
+      <Class name="GameCloud" coverage="88.8" coveredlines="24" coverablelines="27" totallines="62" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="4" totalmethods="4" methodcoverage="100" />
+      <Class name="GameData" coverage="100" coveredlines="7" coverablelines="7" totallines="14" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="15" totalmethods="15" methodcoverage="100" />
+      <Class name="GameUI" coverage="94.8" coveredlines="55" coverablelines="58" totallines="110" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="10" totalmethods="10" methodcoverage="100" />
+      <Class name="Level" coverage="100" coveredlines="20" coverablelines="20" totallines="63" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="2" methodcoverage="100" />
+      <Class name="ListUsersData" coverage="100" coveredlines="1" coverablelines="1" totallines="63" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="1" methodcoverage="100" />
+      <Class name="MenuUIHandler" coverage="48.1" coveredlines="78" coverablelines="162" totallines="247" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="8" totalmethods="15" methodcoverage="53.3" />
+      <Class name="PauseUI" coverage="60.3" coveredlines="35" coverablelines="58" totallines="93" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="6" totalmethods="7" methodcoverage="85.7" />
+      <Class name="Player" coverage="38" coveredlines="72" coverablelines="189" totallines="290" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="15" totalmethods="35" methodcoverage="42.8" />
+      <Class name="SaveUserData" coverage="100" coveredlines="2" coverablelines="2" totallines="63" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="3" totalmethods="3" methodcoverage="100" />
+      <Class name="SaveUserNameData" coverage="100" coveredlines="5" coverablelines="5" totallines="63" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="1" methodcoverage="100" />
+    </Assembly>
+  </Coverage>
+</CoverageReport>
