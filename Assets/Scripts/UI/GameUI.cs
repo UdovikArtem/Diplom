@@ -42,6 +42,8 @@ public class GameUI : MonoBehaviour
         {
             nameText.text = GameData.PlayerName;
         }
+        ChangeHealthbar();
+        ChangeScore();
     }
 
     // Update is called once per frame
@@ -87,7 +89,7 @@ public class GameUI : MonoBehaviour
         }
     }
 
-    public void ChangeHealthbar()
+    virtual public void ChangeHealthbar()
     {
         healthbar.size = Player.Instance.Health / 100f;
         if (healthbar.size > 0)
@@ -100,7 +102,7 @@ public class GameUI : MonoBehaviour
         }
     }
 
-    public void ChangeScore()
+    virtual public void ChangeScore()
     {
         scoreText.text = "Score: " + GameData.Score;
     }

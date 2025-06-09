@@ -49,7 +49,6 @@ public class PlayerTests
         // Мокаем GameUI.Instance
         var gameUI = new GameObject().AddComponent<MockGameUI>();
         GameUI.Instance = gameUI;
-        Debug.Log($"GameUI: {GameUI.Instance == gameUI}");
     }
 
     [TearDown]
@@ -61,12 +60,14 @@ public class PlayerTests
     [UnityTest]
     public IEnumerator TakeDamage_KillsPlayer_WhenHealthReachesZero()
     {
+        MockGameUI.GameOverPageCalled = false;
         player.TakeDamage(100);
 
         yield return null;
 
         Assert.IsTrue(player.IsDead);
         Assert.IsTrue(MockGameUI.GameOverPageCalled);
+        Assert.IsTrue(MockGameUI.ChangeHealthbarCalled);
     }
 
     [UnityTest]
@@ -79,8 +80,9 @@ public class PlayerTests
         Debug.Log(player.IsDead);
         Assert.AreEqual(health, 70);
         Assert.IsFalse(player.IsDead);
-        Assert.IsFalse(MockGameUI.GameOverPageCalled);
 
+        Assert.IsFalse(MockGameUI.GameOverPageCalled);
+        Assert.IsTrue(MockGameUI.ChangeHealthbarCalled);
         yield return null;
     }
 
@@ -101,10 +103,16 @@ public class PlayerTests
     private class MockGameUI : GameUI
     {
         public static bool GameOverPageCalled = false;
+
+        public static bool ChangeHealthbarCalled = false;
         public override void GameOverPage()
         {
             GameOverPageCalled = true;
-            Debug.Log($"{GameOverPageCalled}");
+        }
+
+        public override void ChangeHealthbar()
+        {
+            ChangeHealthbarCalled = true;
         }
     }
 }

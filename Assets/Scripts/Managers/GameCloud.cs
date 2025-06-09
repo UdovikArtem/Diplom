@@ -57,6 +57,5 @@ public class GameCloud : MonoBehaviour
             GameData.PlayerName = userData.name;
             GameData.Levels = userData.levels;
         }
-        Debug.Log(GameData.Levels.ToString());
     }
 }

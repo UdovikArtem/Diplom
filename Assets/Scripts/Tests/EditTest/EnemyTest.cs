@@ -40,6 +40,9 @@ public class EnemyTests
             ?.SetValue(enemy, rb);
         enemy.GetType().GetField("enemyAnim", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)
             ?.SetValue(enemy, anim);
+
+        var gameUI = new GameObject().AddComponent<MockGameUI>();
+        GameUI.Instance = gameUI;
     }
 
     [TearDown]
@@ -74,6 +77,7 @@ public class EnemyTests
     [UnityTest]
     public IEnumerator TakeDamage_LeadsToDeath_WhenHealthDepleted()
     {
+        MockEnemyAnim.DeathCalled = false;
         int damage = 150;
         bool isFromRight = true;
 
@@ -84,6 +88,7 @@ public class EnemyTests
         var isDead = (bool)enemy.GetType().GetField("isDead", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance).GetValue(enemy);
         Assert.IsTrue(isDead);
         Assert.IsTrue(MockEnemyAnim.DeathCalled);
+        Assert.IsTrue(MockGameUI.ChangeScoreCalled);
     }
 
     [Test]
@@ -102,6 +107,17 @@ public class EnemyTests
         public override void Death()
         {
             DeathCalled = true;
+        }
+    }
+
+    private class MockGameUI : GameUI
+    {
+
+        public static bool ChangeScoreCalled = false;
+
+        public override void ChangeScore()
+        {
+            ChangeScoreCalled = true;
         }
     }
 }

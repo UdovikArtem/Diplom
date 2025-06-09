@@ -119,6 +119,15 @@ public class Player : MonoBehaviour
                 Dash();
             }
 
+            if (inputHorizontal > 0 || inputHorizontal < 0)
+            {
+                playerAnim.SetFloat("speed", 1);
+            }
+            else
+            {
+                playerAnim.SetFloat("speed", 0);
+            }
+
             playerAnim.SetBool("is_ground", isOnGround);
 
             if (isDashing)
@@ -181,20 +190,11 @@ public class Player : MonoBehaviour
             isToLeft = true;
         }
 
-        if ((!isAttacking) && !isDashing)
+        if ((!isAttacking || !isOnGround) && !isDashing)
         {
             if (!Physics2D.OverlapBox(obstacleCheck.position, new Vector2(0.1f, 1.5f), 0, obstacleLayer))
             {
                 transform.Translate(Vector2.right * Time.deltaTime * speed * inputHorizontal);
-            }
-
-            if (inputHorizontal > 0 || inputHorizontal < 0)
-            {
-                playerAnim.SetFloat("speed", 1);
-            }
-            else
-            {
-                playerAnim.SetFloat("speed", 0);
             }
         }
     }
@@ -209,6 +209,11 @@ public class Player : MonoBehaviour
             if (dashingDir == Vector2.zero)
             {
                 dashingDir = new Vector2(transform.localScale.x, playerRb.velocity.y);
+            }
+            if (isAttacking)
+            {
+                inputRecived = false;
+                canReceiveInput = true;
             }
             StartCoroutine(StopDashing());
         }

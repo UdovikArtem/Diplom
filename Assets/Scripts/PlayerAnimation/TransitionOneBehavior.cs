@@ -21,7 +21,7 @@ public class TransitionOneBehaivior : StateMachineBehaviour
             animator.SetTrigger(trigerName);
             Player.Instance.InputManager();
             Player.Instance.InputRecived = false;
-            Player.Instance.CanReceiveInput = true;
+            //Player.Instance.CanReceiveInput = true;
         }
     }
 

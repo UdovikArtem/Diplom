@@ -1,35 +1,35 @@
 {
   "summary": {
-    "generatedon": "2025-06-05T17:40:00Z",
-    "parser": "MultiReportParser (7x OpenCoverParser)",
+    "generatedon": "2025-06-08T11:00:05Z",
+    "parser": "MultiReportParser (11x OpenCoverParser)",
     "assemblies": 1,
     "classes": 13,
     "files": 10,
-    "coveredlines": 382,
-    "uncoveredlines": 360,
-    "coverablelines": 742,
-    "totallines": 1242,
-    "linecoverage": 51.4,
+    "coveredlines": 447,
+    "uncoveredlines": 306,
+    "coverablelines": 753,
+    "totallines": 1260,
+    "linecoverage": 59.3,
     "coveredbranches": 0,
     "totalbranches": 0,
-    "coveredmethods": 79,
-    "totalmethods": 126,
-    "methodcoverage": 62.6
+    "coveredmethods": 88,
+    "totalmethods": 129,
+    "methodcoverage": 68.2
  },
   "coverage": {
     "assemblies": [
-      { "name": "Scripts", "classes": 13, "coverage": 51.4, "coveredlines": 382, "coverablelines": 742, "totallines": 1431, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 62.6, "coveredmethods": 79, "totalmethods": 126, "classesinassembly": [
+      { "name": "Scripts", "classes": 13, "coverage": 59.3, "coveredlines": 447, "coverablelines": 753, "totallines": 1449, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 68.2, "coveredmethods": 88, "totalmethods": 129, "classesinassembly": [
         { "name": "CameraFollow", "coverage": 100, "coveredlines": 17, "coverablelines": 17, "totallines": 33, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 2, "totalmethods": 2 },
         { "name": "ColliderDamage", "coverage": 100, "coveredlines": 10, "coverablelines": 10, "totallines": 21, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 1, "totalmethods": 1 },
-        { "name": "Enemy", "coverage": 30.1, "coveredlines": 56, "coverablelines": 186, "totallines": 309, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 36.6, "coveredmethods": 11, "totalmethods": 30 },
-        { "name": "GameCloud", "coverage": 88.8, "coveredlines": 24, "coverablelines": 27, "totallines": 62, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 4, "totalmethods": 4 },
+        { "name": "Enemy", "coverage": 60.4, "coveredlines": 119, "coverablelines": 197, "totallines": 328, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 63.6, "coveredmethods": 21, "totalmethods": 33 },
+        { "name": "GameCloud", "coverage": 88.4, "coveredlines": 23, "coverablelines": 26, "totallines": 61, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 4, "totalmethods": 4 },
         { "name": "GameData", "coverage": 100, "coveredlines": 7, "coverablelines": 7, "totallines": 14, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 15, "totalmethods": 15 },
-        { "name": "GameUI", "coverage": 94.8, "coveredlines": 55, "coverablelines": 58, "totallines": 110, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 10, "totalmethods": 10 },
+        { "name": "GameUI", "coverage": 94.8, "coveredlines": 55, "coverablelines": 58, "totallines": 109, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 10, "totalmethods": 10 },
         { "name": "Level", "coverage": 100, "coveredlines": 20, "coverablelines": 20, "totallines": 63, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 2, "totalmethods": 2 },
         { "name": "ListUsersData", "coverage": 100, "coveredlines": 1, "coverablelines": 1, "totallines": 63, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 1, "totalmethods": 1 },
-        { "name": "MenuUIHandler", "coverage": 48.1, "coveredlines": 78, "coverablelines": 162, "totallines": 247, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 53.3, "coveredmethods": 8, "totalmethods": 15 },
-        { "name": "PauseUI", "coverage": 60.3, "coveredlines": 35, "coverablelines": 58, "totallines": 93, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 85.7, "coveredmethods": 6, "totalmethods": 7 },
-        { "name": "Player", "coverage": 38, "coveredlines": 72, "coverablelines": 189, "totallines": 290, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 42.8, "coveredmethods": 15, "totalmethods": 35 },
+        { "name": "MenuUIHandler", "coverage": 45.6, "coveredlines": 74, "coverablelines": 162, "totallines": 247, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 46.6, "coveredmethods": 7, "totalmethods": 15 },
+        { "name": "PauseUI", "coverage": 63.7, "coveredlines": 37, "coverablelines": 58, "totallines": 93, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 85.7, "coveredmethods": 6, "totalmethods": 7 },
+        { "name": "Player", "coverage": 40.5, "coveredlines": 77, "coverablelines": 190, "totallines": 291, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 42.8, "coveredmethods": 15, "totalmethods": 35 },
         { "name": "SaveUserData", "coverage": 100, "coveredlines": 2, "coverablelines": 2, "totallines": 63, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 3, "totalmethods": 3 },
         { "name": "SaveUserNameData", "coverage": 100, "coveredlines": 5, "coverablelines": 5, "totallines": 63, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 1, "totalmethods": 1 } ] } ]
   }
