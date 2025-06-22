@@ -103,7 +103,7 @@ Transform:
   m_GameObject: {fileID: 1705209156014224747}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.1, y: -0.85, z: 0}
+  m_LocalPosition: {x: 0.1, y: -0.767, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -415,7 +415,7 @@ MonoBehaviour:
   enemyID: df068715-944b-41b3-9f60-a9734895b65a
   health: 100
   speed: 0.5
-  jumpForce: 10
+  jumpForce: 30
   impulse: 10
   score: 100
   spriteRenderer: {fileID: 6856406166729009317}

@@ -33,6 +33,7 @@ public class CameraFollow : MonoBehaviour
 
     private void Start()
     {
+        target = Player.Instance.transform;
         transform.position = new Vector3(target.position.x, target.position.y, -10);
     }
 }

@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 84309d8c-d4ab-4f4a-95b8-e282badf9ef1
-  player: {fileID: 4338147264192314923, guid: 033f6250637d9734f9bc4327902f5a4a, type: 3}
+  player: {fileID: 0}
   text: {fileID: 4502098280757770896}
 --- !u!1 &5589023795697204874
 GameObject:

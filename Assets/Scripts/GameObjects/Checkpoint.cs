@@ -6,19 +6,20 @@ public class Checkpoint : MonoBehaviour
     [SerializeField]
     private string id;
 
-    [SerializeField]
-    private GameObject player;
+    private Transform player;
 
-    [SerializeField] private TextWriter text;
+    [SerializeField] 
+    private TextWriter text;
 
     public string Id => id;
 
     private void Start()
     {
+        player = Player.Instance.transform;
         Debug.Log(GameData.CurrentCheckpoint);
         if(GameData.CurrentCheckpoint == id)
         {
-            player.transform.position = transform.position;
+            player.position = transform.position;
             GetComponent<Collider2D>().enabled = false;
         }
     }
@@ -43,6 +44,7 @@ public class Checkpoint : MonoBehaviour
             GameData.CurrentLevel.currentCheckpointId = id;
             GameData.CurrentLevel.deadEnemies = GameData.DeadEnemiesId;
             GameData.CurrentLevel.currentScore = GameData.Score;
+            GameData.CurrentLevel.health = GameData.PlayerHealth;
 
             GameData.Levels[GameData.CurrentLevel.levelId - 1] = GameData.CurrentLevel;
             await GameManager.Instance.ChangeUserData();

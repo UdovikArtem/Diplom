@@ -131,7 +131,7 @@ public class GameManager : MonoBehaviour
             {
                 ListUsersData data = new ListUsersData();
                 data.users.Add(new SaveUserNameData(name, password));
-
+                //File.Create(path);
                 MakeNewUser(data, name);
                 return true;
             }
@@ -188,9 +188,12 @@ public class GameManager : MonoBehaviour
     {
         isCorrect = await CloudSignIn(name, password);
 
+        string path = Application.persistentDataPath + "/save_user_file.json";
+        string directoryPath = Application.persistentDataPath + "/" + name;
+        string userDataPath = directoryPath + "/data.json";
         if (!isCorrect)
         {
-            string path = Application.persistentDataPath + "/save_user_file.json";
+            
             if (File.Exists(path))
             {
                 string json = File.ReadAllText(path);
@@ -200,23 +203,14 @@ public class GameManager : MonoBehaviour
                 {
                     if (user.name.Equals(name) && user.password.Equals(password))
                     {
-                        string directoryPath = Application.persistentDataPath + "/" + name;
-
                         if (!Directory.Exists(directoryPath))
                         {
                             Directory.CreateDirectory(directoryPath);
-                        }
-                        string userDataPath = directoryPath + "/data.json";
+                        }                      
                         if (File.Exists(userDataPath))
                         {
                             string userDatajson = File.ReadAllText(userDataPath);
                             SaveUserData loadUserData = JsonUtility.FromJson<SaveUserData>(userDatajson);
-                            foreach (var item in loadUserData.levels)
-                            {
-                                Debug.Log(item.isAvailable + " " + item.levelId);
-                            }
-                            
-
                             GameData.PlayerName = name;
                             GameData.Levels = loadUserData.levels;
                         }
@@ -237,6 +231,46 @@ public class GameManager : MonoBehaviour
         else
         {
             await GameCloud.Instance.LoadData();
+            if (File.Exists(path))
+            {
+                string json = File.ReadAllText(path);
+                ListUsersData data = JsonUtility.FromJson<ListUsersData>(json);
+
+                bool isUserExists = false;
+                foreach (var user in data.users)
+                {
+                    if (user.name.Equals(name) && user.password.Equals(password))
+                    {
+                        isUserExists = true;
+                        break;
+                    }
+                }
+                if (!isUserExists)
+                {
+                    SaveUserNameData userData = new SaveUserNameData(name, password);
+                    
+                    data.users.Add(userData);
+                    string newJson = JsonUtility.ToJson(data);
+                    File.WriteAllText(Application.persistentDataPath + "/save_user_file.json", newJson);
+                }
+            }
+            else
+            {
+                ListUsersData data = new ListUsersData();
+                data.users.Add(new SaveUserNameData(name, password));
+                string newJson = JsonUtility.ToJson(data);
+                File.WriteAllText(Application.persistentDataPath + "/save_user_file.json", newJson);
+            }
+            if (!Directory.Exists(directoryPath))
+            {
+                Directory.CreateDirectory(directoryPath);
+            }
+            SaveUserData newUserData = new SaveUserData();
+            newUserData.name = GameData.PlayerName;
+            newUserData.levels = GameData.Levels;
+            string userDataJson = JsonUtility.ToJson(newUserData);
+            File.WriteAllText(userDataPath, userDataJson);
+
             return true;
         }
     }

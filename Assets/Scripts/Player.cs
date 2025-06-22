@@ -106,6 +106,7 @@ public class Player : MonoBehaviour
             dashInput = Input.GetKeyUp(KeyCode.LeftShift);
             attackInput = Input.GetMouseButtonDown(0);
             inputHorizontal = Input.GetAxis("Horizontal");
+            inputJump = Input.GetKeyDown(KeyCode.Space);
             if (inputHorizontal != 0)
             {
                 Move();
@@ -117,6 +118,12 @@ public class Player : MonoBehaviour
             if (dashInput)
             {
                 Dash();
+            }
+
+
+            if (inputJump)
+            {
+                Jump();
             }
 
             if (inputHorizontal > 0 || inputHorizontal < 0)
@@ -156,11 +163,6 @@ public class Player : MonoBehaviour
     {
         if (!isDead)
         {
-            inputJump = Input.GetKey(KeyCode.Space);
-            if (inputJump)
-            {
-                Jump();
-            }
 
             if (playerRb.velocity.y > 10)
             {
@@ -250,6 +252,7 @@ public class Player : MonoBehaviour
     virtual public void TakeDamage(int damage)
     {
         health -= damage;
+        GameData.PlayerHealth = health;
 
         GameUI.Instance.ChangeHealthbar();
         if (health <= 0)
